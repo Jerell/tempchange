@@ -1,0 +1,9 @@
+/.quarto/
+/_site/
+/_book/
+.auto/
+*_files/
+
+*.rel
+.Rhistory
+.DS_Store
