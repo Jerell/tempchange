@@ -2,13 +2,12 @@ project:
   type: book
 
 book:
-  title: "temp change"
+  title: "temperature change"
   author: "Jerell James"
   public-url: https://jerell.me/tempchange/
   repo-url: https://github.com/Jerell/tempchange
   repo-actions: [edit, issue]
   reader-mode: true
-  date: "14/10/2023"
   chapters:
     - index.qmd
     - intro.qmd
