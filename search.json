@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "temp change",
+    "title": "temperature change",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Preface\nSo far, we have been describing heat transfer in terms of what happens to a given parcel of fluid. A transient model must instead describe what happens at a given point in the flow field.\nThe temperature of fluid at different points along a pipe is a result of multiple factors:\n\nHeat exchange between the fluid and its surroundings. (The effect of the ambient conditions)\nMovement through the pipe: If the fluid temperature is not uniform, we should observe areas of high and low temperature moving with the fluid.\nHeat dissipation within the fluid: The temperature of the fluid should become more uniform over time, all else equal.\nMaybe some effect from pressure change. It’s unclear how relevant this is and I don’t expect it to have a huge effect in pipes.\n\nOur current model accounts for #1 and #4, but not #2 and #3. There is an implicit assumption that the parcels of fluid either side of the one we follow through a pipe had the same conditions leaving the emitter, and that these parcels of fluid have no effect on their neighbours."
   },
   {
     "objectID": "intro.html",
