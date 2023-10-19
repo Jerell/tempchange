@@ -4,27 +4,41 @@
     "href": "index.html",
     "title": "temperature change",
     "section": "",
-    "text": "Preface\nSo far, we have been describing heat transfer in terms of what happens to a given parcel of fluid. A transient model must instead describe what happens at a given point in the flow field.\nThe temperature of fluid at different points along a pipe is a result of multiple factors:\n\nHeat exchange between the fluid and its surroundings. (The effect of the ambient conditions)\nMovement through the pipe: If the fluid temperature is not uniform, we should observe areas of high and low temperature moving with the fluid.\nHeat dissipation within the fluid: The temperature of the fluid should become more uniform over time, all else equal.\nMaybe some effect from pressure change. It’s unclear how relevant this is and I don’t expect it to have a huge effect in pipes.\n\nOur current model accounts for #1 and #4, but not #2 and #3. There is an implicit assumption that the parcels of fluid either side of the one we follow through a pipe had the same conditions leaving the emitter, and that these parcels of fluid have no effect on their neighbours."
+    "text": "Introduction\nSo far, we have been describing heat transfer in terms of what happens to a given parcel of fluid. A transient model must instead describe what happens at a given point in the flow field.\nThe temperature of fluid at different points along a pipe is a result of multiple factors:\n\nHeat exchange between the fluid and its surroundings. (The effect of the ambient conditions)\nMovement through the pipe: If the fluid temperature is not uniform, we should observe areas of high and low temperature moving with the fluid.\nHeat diffusion within the fluid: The temperature of the fluid should become more uniform over time, all else equal.\nMaybe some effect from pressure change. It’s unclear how relevant this is and I don’t expect it to have a huge effect in pipes.\n\nOur current model accounts for #1 and #4, but not #2 and #3. There is an implicit assumption that the parcels of fluid either side of the one we follow through a pipe had the same conditions leaving the emitter, and that these parcels of fluid have no effect on their neighbours."
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
+    "objectID": "ambient.html",
+    "href": "ambient.html",
+    "title": "1  Ambient",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "The fluid loses heat to the surroundings when it is above ambient temperature and absorbs heat when below.\nThis is probably the easiest part to model. At each point, \\frac{\\delta T}{\\delta t}_{a} will be proportional somehow to the difference in temperature between the fluid and ambient. The temperature difference and the u value of the pipe wall determine the rate of energy transfer, and the specific heat at constant pressure will determine how that translates into temperature change.\n\n\nShow the code\nusing Plots\n\nplot(x -&gt; 1 / ℯ^x,\n    0,\n    2π,\n    label=\"temperature\",\n    xlabel=\"time\"\n)\n\n\n\n\n\nFigure 1.1: Temperature falling over time"
+  },
+  {
+    "objectID": "movement.html",
+    "href": "movement.html",
+    "title": "2  Movement",
+    "section": "",
+    "text": "Properties that change at an emitter will take time to propagate, moving with the fluid.\n\n\nShow the code\nusing Plots\n\n@gif for i ∈ 1:62\n    plot(\n        x -&gt; 0.5 * sin(x - 0.1 * i),\n        xlims=(0, 4π),\n        ylims=(-1, 1),\n        label=\"temperature\",\n        xlabel=\"displacement\",\n    )\nend\n\n\n[ Info: Saved animation to /Users/jerell/Repos/tempchange/tmp.gif\n\n\n\n\nFigure 2.1: Temperature falling over time"
+  },
+  {
+    "objectID": "diffusion.html",
+    "href": "diffusion.html",
+    "title": "3  Diffusion",
+    "section": "",
+    "text": "Even without flow or any heat exchange with the surroundings, the temperature distribution should become more uniform over time.\n\n\nShow the code\nusing Plots\n\n@gif for i ∈ 20:80\n    plot(\n        x -&gt; 10 * sin(x) / i,\n        xlims=(0, 4π),\n        ylims=(-1, 1),\n        label=\"temperature\",\n        xlabel=\"displacement\",\n    )\nend\n\n\n[ Info: Saved animation to /Users/jerell/Repos/tempchange/tmp.gif\n\n\n\n\nFigure 3.1: Temperature falling over time"
+  },
+  {
+    "objectID": "pressure.html",
+    "href": "pressure.html",
+    "title": "4  Pressure effects",
+    "section": "",
+    "text": "Joule–Thomson effect is probably relevant"
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "5  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   }
 ]
