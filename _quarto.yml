@@ -10,7 +10,10 @@ book:
   reader-mode: true
   chapters:
     - index.qmd
-    - intro.qmd
+    - ambient.qmd
+    - movement.qmd
+    - diffusion.qmd
+    - pressure.qmd
     - summary.qmd
     - references.qmd
 

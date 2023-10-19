@@ -1,0 +1,22 @@
+# Ambient
+
+The fluid loses heat to the surroundings when it is above ambient temperature and absorbs heat when below.
+
+This is probably the easiest part to model. At each point, $\frac{\delta T}{\delta t}_{a}$ will be proportional somehow to the difference in temperature between the fluid and ambient. The temperature difference and the $u$ value of the pipe wall determine the rate of energy transfer, and the specific heat at constant pressure will determine how that translates into temperature change.
+
+```{julia}
+#| label: fig-ambient
+#| fig-cap: "Temperature falling over time"
+#| code-fold: true
+#| code-summary: "Show the code"
+
+using Plots
+
+plot(x -> 1 / ℯ^x,
+    0,
+    2π,
+    label="temperature",
+    xlabel="time"
+)
+
+```

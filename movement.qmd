@@ -1,0 +1,23 @@
+# Movement
+
+Properties that change at an emitter will take time to propagate, moving with the fluid.
+
+```{julia}
+#| label: fig-ambient
+#| fig-cap: "Temperature falling over time"
+#| code-fold: true
+#| code-summary: "Show the code"
+
+using Plots
+
+@gif for i ∈ 1:62
+    plot(
+        x -> 0.5 * sin(x - 0.1 * i),
+        xlims=(0, 4π),
+        ylims=(-1, 1),
+        label="temperature",
+        xlabel="displacement",
+    )
+end
+
+```

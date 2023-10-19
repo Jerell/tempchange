@@ -7,3 +7,5 @@
 *.rel
 .Rhistory
 .DS_Store
+
+tmp.gif

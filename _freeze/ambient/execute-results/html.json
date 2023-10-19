@@ -1,0 +1,11 @@
+{
+  "hash": "5373a2b91f2879ae24543d7c6f6f1e40",
+  "result": {
+    "markdown": "# Ambient\n\nThe fluid loses heat to the surroundings when it is above ambient temperature and absorbs heat when below.\n\nThis is probably the easiest part to model. At each point, $\\frac{\\delta T}{\\delta t}_{a}$ will be proportional somehow to the difference in temperature between the fluid and ambient. The temperature difference and the $u$ value of the pipe wall determine the rate of energy transfer, and the specific heat at constant pressure will determine how that translates into temperature change.\n\n::: {.cell execution_count=1}\n``` {.julia .cell-code code-fold=\"true\" code-summary=\"Show the code\"}\nusing Plots\n\nplot(x -> 1 / ℯ^x,\n    0,\n    2π,\n    label=\"temperature\",\n    xlabel=\"time\"\n)\n```\n\n::: {.cell-output .cell-output-display execution_count=5}\n![Temperature falling over time](ambient_files/figure-html/fig-ambient-output-1.svg){#fig-ambient}\n:::\n:::\n\n\n",
+    "supporting": [
+      "ambient_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
