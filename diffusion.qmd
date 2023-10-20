@@ -4,7 +4,7 @@ Even without flow or any heat exchange with the surroundings, the temperature di
 
 ```{julia}
 #| label: fig-ambient
-#| fig-cap: "Temperature falling over time"
+#| fig-cap: "Temperature distribution becoming more uniform"
 #| code-fold: true
 #| code-summary: "Show the code"
 

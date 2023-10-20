@@ -4,7 +4,7 @@ Properties that change at an emitter will take time to propagate, moving with th
 
 ```{julia}
 #| label: fig-ambient
-#| fig-cap: "Temperature falling over time"
+#| fig-cap: "Temperature distribution moving with fluid"
 #| code-fold: true
 #| code-summary: "Show the code"
 
