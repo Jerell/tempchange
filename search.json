@@ -18,14 +18,14 @@
     "href": "movement.html",
     "title": "2  Movement",
     "section": "",
-    "text": "Properties that change at an emitter will take time to propagate, moving with the fluid.\n\n\nShow the code\nusing Plots\n\n@gif for i ∈ 1:62\n    plot(\n        x -&gt; 0.5 * sin(x - 0.1 * i),\n        xlims=(0, 4π),\n        ylims=(-1, 1),\n        label=\"temperature\",\n        xlabel=\"displacement\",\n    )\nend\n\n\n[ Info: Saved animation to /Users/jerell/Repos/tempchange/tmp.gif\n\n\n\n\nFigure 2.1: Temperature falling over time"
+    "text": "Properties that change at an emitter will take time to propagate, moving with the fluid.\n\n\nShow the code\nusing Plots\n\n@gif for i ∈ 1:62\n    plot(\n        x -&gt; 0.5 * sin(x - 0.1 * i),\n        xlims=(0, 4π),\n        ylims=(-1, 1),\n        label=\"temperature\",\n        xlabel=\"displacement\",\n    )\nend\n\n\n[ Info: Saved animation to /Users/jerell/Repos/tempchange/tmp.gif\n\n\n\n\nFigure 2.1: Temperature distribution moving with fluid"
   },
   {
     "objectID": "diffusion.html",
     "href": "diffusion.html",
     "title": "3  Diffusion",
     "section": "",
-    "text": "Even without flow or any heat exchange with the surroundings, the temperature distribution should become more uniform over time.\n\n\nShow the code\nusing Plots\n\n@gif for i ∈ 20:80\n    plot(\n        x -&gt; 10 * sin(x) / i,\n        xlims=(0, 4π),\n        ylims=(-1, 1),\n        label=\"temperature\",\n        xlabel=\"displacement\",\n    )\nend\n\n\n[ Info: Saved animation to /Users/jerell/Repos/tempchange/tmp.gif\n\n\n\n\nFigure 3.1: Temperature falling over time"
+    "text": "Even without flow or any heat exchange with the surroundings, the temperature distribution should become more uniform over time.\n\n\nShow the code\nusing Plots\n\n@gif for i ∈ 20:80\n    plot(\n        x -&gt; 10 * sin(x) / i,\n        xlims=(0, 4π),\n        ylims=(-1, 1),\n        label=\"temperature\",\n        xlabel=\"displacement\",\n    )\nend\n\n\n[ Info: Saved animation to /Users/jerell/Repos/tempchange/tmp.gif\n\n\n\n\nFigure 3.1: Temperature distribution becoming more uniform"
   },
   {
     "objectID": "pressure.html",
