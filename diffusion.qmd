@@ -3,7 +3,7 @@
 Even without flow or any heat exchange with the surroundings, the temperature distribution should become more uniform over time.
 
 ```{julia}
-#| label: fig-ambient
+#| label: fig-diffusion
 #| fig-cap: "Temperature distribution becoming more uniform"
 #| code-fold: true
 #| code-summary: "Show the code"
