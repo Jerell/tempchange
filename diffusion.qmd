@@ -1,6 +1,6 @@
 # Diffusion
 
-Even without flow or any heat exchange with the surroundings, the temperature distribution should become more uniform over time.
+Even without flow or any heat exchange with the surroundings, the temperature distribution should become [more uniform over time](https://en.wikipedia.org/wiki/Convection%E2%80%93diffusion_equation).
 
 ```{julia}
 #| label: fig-diffusion

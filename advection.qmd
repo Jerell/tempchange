@@ -1,6 +1,6 @@
 # Advection
 
-Properties are carried with the fluid.
+Properties are [carried](https://en.wikipedia.org/wiki/Convection%E2%80%93diffusion_equation) with the fluid.
 
 ```{julia}
 #| label: fig-advection
